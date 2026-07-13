@@ -1,22 +1,28 @@
 name: Get Citation Data
 
-on: 
- page_build: 
+on:
+ page_build:
+ workflow_dispatch:
  schedule:
   - cron:  '0 8 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
-      run: |
-        sudo apt-get install python3-setuptools
-    - name: Run
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: pip install -r google_scholar_crawler/requirements.txt
+    - name: Fetch Google Scholar citations
       run: |
         cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
         python3 main.py
         cd ./results
         git init
@@ -25,5 +31,5 @@ jobs:
         git add *.json
         git commit -m "Updated Citation Data"
         git push "${remote_repo}" HEAD:google-scholar-stats --force
-      env: 
-        GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+      env:
+        GOOGLE_SCHOLAR_ID: 02BOfjcAAAAJ

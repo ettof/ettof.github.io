@@ -6,13 +6,38 @@
         var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
         {% endif %}
         $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
-            var totalCitation = data['citedby']
-            document.getElementById('total_cit').innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName('show_paper_citations')
-            Array.prototype.forEach.call(citationEles, element => {
-                var paperId = element.getAttribute('data')
-                var numCitations = data['publications'][paperId]['num_citations']
-                element.innerHTML = '| Citations: ' + numCitations;
+            var totalCitation = document.getElementById('total_cit');
+            var scholarStats = document.getElementById('scholar-stats');
+            var publications = data.publications || {};
+
+            if (totalCitation && scholarStats && data.citedby !== undefined) {
+                totalCitation.textContent = data.citedby;
+                scholarStats.hidden = false;
+            }
+
+            function normalizeTitle(title) {
+                return (title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            }
+
+            var publicationsByTitle = {};
+            Object.keys(publications).forEach(function (paperId) {
+                var publication = publications[paperId];
+                var title = publication.bib && publication.bib.title;
+                if (title) {
+                    publicationsByTitle[normalizeTitle(title)] = publication;
+                }
+            });
+
+            var citationEles = document.getElementsByClassName('show_paper_citations');
+            Array.prototype.forEach.call(citationEles, function (element) {
+                var paperId = element.getAttribute('data');
+                var paperTitle = element.getAttribute('data-title');
+                var publication = paperId ? publications[paperId] : publicationsByTitle[normalizeTitle(paperTitle)];
+
+                if (publication && publication.num_citations !== undefined) {
+                    element.textContent = '| Citations: ' + publication.num_citations;
+                    element.hidden = false;
+                }
             });
         });
     })

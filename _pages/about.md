@@ -3,56 +3,98 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am Zhiyang Chen, an M.S. student in Control Engineering at the School of Control Science and Engineering, Shandong University, supervised by Prof. Runmin Cong.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I received my B.Eng. in Automation from Shandong University in 2024.
 
+I am currently looking for Ph.D. opportunities and welcome inquiries from prospective advisors and collaborators.
 
-# 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<p id="scholar-stats" class="scholar-stats" hidden>Google Scholar citations: <strong><span id="total_cit"></span></strong>.</p>
 
-# 📝 Publications 
+# Research Interests
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+My research focuses on computer vision and visual foundation models, with particular interests in robust visual perception under challenging real-world conditions, including underwater and condition-constrained scenes.
+
+# Publications
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral</div><img src='images/publications/diveseg-thumb.jpg' alt="DiveSeg framework" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[Empowering DINO Representations for Underwater Instance Segmentation via Aligner and Prompter](http://arxiv.org/abs/2511.08334)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**Zhiyang Chen**, Chen Zhang, Hao Fang, Runmin Cong
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+*Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2026, 40(5): 3201-3209. Oral.*
+
+[[Paper](http://arxiv.org/abs/2511.08334)] [[Project](https://github.com/ettof/Diveseg)] <strong><span class="show_paper_citations" data-title="Empowering DINO Representations for Underwater Instance Segmentation via Aligner and Prompter" hidden></span></strong>
+
+<p class="paper-summary">Adapts DINO representations to underwater scenes through lightweight aligner and prompter modules, achieving state-of-the-art results on UIIS and USIS10K.</p>
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2026</div><img src='images/publications/csod-main-thumb.jpg' alt="CSOD framework" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+[Breaking Barriers, Localizing Saliency: A Large-scale Benchmark and Baseline for Condition-Constrained Salient Object Detection](https://ieeexplore.ieee.org/document/11297835)
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+Runmin Cong, **Zhiyang Chen**, Hao Fang, Sam Kwong, Wei Zhang
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+*IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), vol. 48, no. 4, pp. 4167-4183, Apr. 2026.*
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+[[Paper](https://ieeexplore.ieee.org/document/11297835)] [[Project](https://github.com/ettof/CSOD)] <strong><span class="show_paper_citations" data-title="Breaking Barriers, Localizing Saliency: A Large-scale Benchmark and Baseline for Condition-Constrained Salient Object Detection" hidden></span></strong>
+
+<p class="paper-summary">Introduces the CSOD task and CSOD10K benchmark, together with CSSAM for saliency localization under challenging real-world conditions.</p>
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/publications/uis-mamba-framework-thumb.jpg' alt="UIS-Mamba framework" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[UIS-Mamba++: Iterative Graph Scan and Hidden State Modulation for Robust Underwater Instance Segmentation](https://github.com/Maricalce/UIS-Mamba)
+
+Zongji Yu, Hao Fang, **Zhiyang Chen**, Sam Kwong, Runmin Cong
+
+*IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), under review.*
+
+[[Project](https://github.com/Maricalce/UIS-Mamba)] <strong><span class="show_paper_citations" data-title="UIS-Mamba++: Iterative Graph Scan and Hidden State Modulation for Robust Underwater Instance Segmentation" hidden></span></strong>
+
+<p class="paper-summary">Extends UIS-Mamba with iterative graph scanning and hidden-state modulation for robust underwater instance segmentation.</p>
+</div>
+</div>
+
+# Other Publications
+
+- [Underwater image segmentation methods: a survey](https://www.cjig.cn/en/article/doi/10.11834/jig.250481/), Hao Fang, Zongji Yu, **Zhiyang Chen**, Runmin Cong, *Journal of Image and Graphics*, vol. 31, no. 5, pp. 1350-1371, 2026. <strong><span class="show_paper_citations" data-title="Underwater image segmentation methods: a survey" hidden></span></strong>
+
+# Scientific Competitions
+
+- *Jul. 2026*, First Prize, ICME 2026 Grand Challenge on Cross-scenario Defect Detection and Fine-grained Severity Grading for High-precision Manufacturing.  
+  Zhiyang Chen, Hao Fang, Chen Zhang, Runmin Cong.
+
+- *Oct. 2025*, Third Prize, 7th Huawei Cup China Graduate Student Artificial Intelligence Innovation Competition.  
+  Hao Fang, Zhiyang Chen, Runmin Cong.
+
+- *Apr. 2025*, Third Prize, Single Image Reflection Removal in the Wild: NTIRE Challenge in conjunction with CVPR 2025.  
+  Zhiyang Chen, Hao Fang, Wei Zhang, Runmin Cong.
+
+- *Apr. 2025*, First Prize, CVPR 2025 MeViS Track at Pixel-level Video Understanding in the Wild Challenge.  
+  Hao Fang, Runmin Cong, Xiankai Lu, Zhiyang Chen, Wei Zhang.
+
+- *Mar. 2022*, Second Prize, 17th National University Students Intelligent Car Race.  
+  Zhiyang Chen, Zihao Zhang, Junjie Zhang, Shuang Zhang, Hao Wu, Guiyou Chen.
+
+# Education
+
+- *Sep. 2024 - Present*, M.S. in Control Engineering, Shandong University.  
+  Advisor: Prof. Runmin Cong.  
+  Awards: Master's Freshman Scholarship, AAAI Volunteer Scholarship.
+
+- *Sep. 2020 - Jul. 2024*, B.Eng. in Automation, Shandong University.  
+  Awards: Undergraduate Academic Scholarship, Innovation Scholarship, Outstanding Undergraduate Graduate of Shandong Province.

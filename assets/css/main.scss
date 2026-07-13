@@ -42,49 +42,72 @@
 
 .paper-box {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
+    padding: 1.5em 0;
 
-    .paper-box-image{
+    .paper-box-image {
         justify-content: center;
         display: flex;
         width: 100%;
-        order: 2;
+        order: 1;
+        margin-bottom: 1.25em;
+
+        > div {
+            width: 100%;
+            max-width: 460px;
+        }
+
         img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #e3e5e8;
+            border-radius: 3px;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, .14);
+            object-fit: contain;
         }
     }
-    
-    .paper-box-text{
+
+    .paper-box-text {
         max-width: 100%;
-        order: 1;
+        min-width: 0;
+        order: 2;
+
+        p {
+            margin: 0 0 .65em;
+        }
+
+        .paper-summary {
+            margin-bottom: 0;
+            color: #555;
+        }
     }
-    
+
     @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
+        flex-wrap: nowrap;
+
+        .paper-box-image {
+            justify-content: flex-start;
+            flex: 0 0 42%;
             min-width: 200px;
-            max-width: 40%;
+            max-width: 42%;
+            margin-bottom: 0;
             order: 1;
         }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
+
+        .paper-box-text {
+            flex: 1 1 58%;
+            justify-content: flex-start;
+            box-sizing: border-box;
+            padding-left: 1.5em;
+            max-width: 58%;
             order: 2;
         }
-
     }
-
-
 }
 
 $scroll_offset : 2em;
@@ -106,4 +129,18 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
+}
+
+.scholar-stats,
+.show_paper_citations {
+    color: #555;
+}
+
+.scholar-stats {
+    margin-top: -.35em;
+    font-size: .95em;
+}
+
+.show_paper_citations {
+    white-space: nowrap;
 }
